@@ -1,0 +1,27 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+
+
+<div id="app">
+    <p v-once>{{ titulo }}</p>
+    <P>{{ saudacao() }}</P>
+    <a v-bind:href="link">Google</a>
+</div>
+
+
+<script>
+    new Vue ({
+        el:'#app',
+        data:{
+            titulo: 'Usando VueJS 2! Diretiva V-ONCE',
+            link: "http://google.com.br"
+        },
+        methods: {
+            saudacao: function(){
+                this.titulo = "Rodrigo Ramirez"
+                return this.titulo
+            }
+        }
+    })
+</script>
